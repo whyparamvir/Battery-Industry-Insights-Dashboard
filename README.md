@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# 🔋 Battery Industry Insights Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> An interactive dashboard ranking the world's **top 100 battery manufacturers** (2024–2025) — explore market share, production capacity, revenue, R&D spend, chemistry and growth across the global battery industry.
 
-Currently, two official plugins are available:
+<p align="center">
+  <a href="https://whyparamvir.github.io/Battery-Industry-Insights-Dashboard/"><strong>🌐 View the live dashboard →</strong></a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
+![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed-GitHub_Pages-222?logo=github&logoColor=white)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📖 Overview
 
-## Expanding the ESLint configuration
+The **Battery Industry Insights Dashboard** compiles data on the **100 largest battery manufacturing companies worldwide** into a single, interactive web app. It turns dense industry data — sourced from SNE Research, company annual reports, BloombergNEF and the IEA — into sortable rankings, visual charts and side-by-side comparisons.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📊 Data highlights (2024–2025)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **100 manufacturers** tracked across **20+ countries**
+- **1,400+ GWh** of 2025 battery installations and **$430B+** combined 2024 revenue
+- **CATL** leads with ~**39%** market share — the **top 3** (CATL, BYD, LG Energy Solution) hold ~**65%**
+- **China** is home to **6 of the top 10** players (~70% of global share)
+- Fastest-growing majors: **Gotion (+82%)** and **CALB (+45%)** year-over-year
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **📈 Overview & Charts** — KPI summary cards plus interactive charts: top companies by installations, breakdowns by region and country, a revenue-vs-capacity scatter, and a top-5 radar comparison (toggle Top 10 / 15 / 20 / 50).
+- **🏆 Leaderboards** — rank companies by installations, market share, revenue, R&D spend, energy density or growth rate.
+- **📋 Full Data Table** — search, sort every column, filter by region and chemistry, open company websites, and export to CSV.
+- **⚖️ Compare** — pick any two companies for a head-to-head breakdown across all key metrics.
+
+## 🗂️ Metrics tracked
+
+Market share · 2025 installations (GWh) · production capacity · 2024 revenue · R&D spend · primary chemistry (LFP, NCM, sodium-ion, solid-state…) · energy density · YoY growth · market cap · workforce · founding year.
+
+## 🛠️ Tech stack
+
+- **React 19** + **TypeScript**
+- **Vite** — build tooling & dev server
+- **Tailwind CSS** + **shadcn/ui** components
+- **Recharts** / **Chart.js** for data visualization
+
+## 🚀 Run locally
+
+```bash
+# install dependencies
+npm install
+
+# start the dev server (http://localhost:3000)
+npm run dev
+
+# build for production
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The site deploys automatically to **GitHub Pages** via GitHub Actions on every push to `main` (see [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)). Live at:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**https://whyparamvir.github.io/Battery-Industry-Insights-Dashboard/**
+
+## 📚 Data sources
+
+SNE Research (2025), company annual reports, BloombergNEF, IEA, and industry analysis. *Figures are compiled estimates for 2024–2025 and intended for informational purposes only.*
+
+---
+
+<p align="center"><sub>Built with React + Vite · Data current as of June 2025</sub></p>
